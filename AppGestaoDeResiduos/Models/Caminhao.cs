@@ -17,6 +17,8 @@ namespace AppGestaoDeResiduos.Models
         [Required]
         public int Capacidade { get; set; }
 
+        public LocalizacaoCaminhao LocalizacaoCaminhao { get; set; }
+
 
 
 

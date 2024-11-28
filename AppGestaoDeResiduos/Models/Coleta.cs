@@ -14,6 +14,13 @@ namespace AppGestaoDeResiduos.Models
 
         [Column("capacidade_usada")]
         public int CapacidadeUsada { get; set; }
+        
+        [Column("data_coleta")]
+        public DateOnly DataDaColeta { get; set; } // Pegar data da coleta
+
+        public Caminhao Caminhao { get; set; } // Uma coleta para Um caminhao
+
+        public Rota Rota { get; set; } // Uma Coleta para Uma rota
 
         //Fazer relacionamento com classe Caminhao
         //[HasOne()]
