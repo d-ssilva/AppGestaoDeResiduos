@@ -9,15 +9,23 @@ namespace AppGestaoDeResiduos.Models
     public class Caminhao
     {
         [Key]
-        public int Id { get; set; }
+        public int CaminhaoId { get; set; }
 
         [Required]
-        public string? Placa { get; set; }
+        public string Placa { get; set; }
 
         [Required]
         public int Capacidade { get; set; }
+        
 
-        public LocalizacaoCaminhao LocalizacaoCaminhao { get; set; }
+        //RELACIONAMENTO
+        //Um caminhão tem apenas uma localização 
+        // e uma coleta
+        public LocalizacaoCaminhao? LocalizacaoCaminhao { get; set; }
+        public  Coleta Coleta { get; set; }
+        public int ColetaId { get; set; }
+
+        // \RELACIONAMENTO
 
 
 

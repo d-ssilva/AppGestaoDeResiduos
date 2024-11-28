@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppGestaoDeResiduos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1859b51e7ea7220afffb319222a9ccac1da2237f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c27bc1d1fc9f36c0cae8631a4b325a85c73edc8e")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppGestaoDeResiduos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppGestaoDeResiduos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
