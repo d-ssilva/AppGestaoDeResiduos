@@ -1,18 +1,19 @@
 ﻿using AppGestaoDeResiduos.Models;
 using Microsoft.EntityFrameworkCore;
+using static AppGestaoDeResiduos.Models.UsuarioColeta;
 
 public class ApplicationDbContext : DbContext
 {
-    public DbSet<Caminhao> Caminhoes { get; set; }
-    public DbSet<Coleta> Coletas { get; set; }
-    public DbSet<Usuario> Usuarios { get; set; }
-    public DbSet<Notificacao> Notificacoes { get; set; }
-    public DbSet<Endereco> Enderecos { get; set; }
-    public DbSet<LocalizacaoCaminhao> LocalizacoesCaminhoes { get; set; }
+    public DbSet<Caminhao>? Caminhoes { get; set; }
+    public DbSet<Coleta>? Coletas { get; set; }
+    public DbSet<Usuario>? Usuarios { get; set; }
+    public DbSet<Notificacao>? Notificacoes { get; set; }
+    public DbSet<Endereco>? Enderecos { get; set; }
+    public DbSet<Localizacao>? LocalizacoesCaminhoes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        // Configuração para o Oracle
+        // Configuração do Oracle (esta no meu usuário)
         optionsBuilder.UseOracle("User Id=rm553989;Password=200794;Data Source=oracle.fiap.com.br:1521/orcl");
     }
 
@@ -27,11 +28,7 @@ public class ApplicationDbContext : DbContext
             entity.HasKey(e => e.CaminhaoId);
             entity.Property(e => e.Placa).HasColumnName("placa").HasMaxLength(7);
             entity.Property(e => e.QtdColetas).HasColumnName("qtd_de_coletas");
-            entity.Property(e => e.QtdColetasMaxima).HasColumnName("qtd_de_coletas_max");
-            entity.HasOne(d => d.Coleta)
-                .WithMany()
-                .HasForeignKey(d => d.ColetaId)
-                .OnDelete(DeleteBehavior.SetNull);
+            entity.Property(e => e.QtdColetasMaxima).HasColumnName("qtd_de_coletas_max");           
         });
 
         // Configuração de tb_coleta
@@ -44,15 +41,11 @@ public class ApplicationDbContext : DbContext
             entity.HasOne(d => d.Endereco)
                 .WithMany()
                 .HasForeignKey(d => d.EnderecoId)
-                .OnDelete(DeleteBehavior.Cascade);
-            entity.HasOne(d => d.Caminhao)
-                .WithMany()
-                .HasForeignKey(d => d.CaminhaoId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Cascade);            
         });
 
         // Configuração de tb_localizacao_caminhao
-        modelBuilder.Entity<LocalizacaoCaminhao>(entity =>
+        modelBuilder.Entity<Localizacao>(entity =>
         {
             entity.ToTable("tb_localizacao_caminhao");
             entity.HasKey(e => e.LocalizacaoCaminhaoId);
@@ -108,5 +101,20 @@ public class ApplicationDbContext : DbContext
             entity.Property(e => e.Rua).HasColumnName("rua").HasMaxLength(150);
             entity.Property(e => e.Numero).HasColumnName("numero");
         });
+
+        // Relacionamento Caminhao e Coleta N:N
+        modelBuilder.Entity<CaminhaoColeta>()
+    .       HasKey(cc => new { cc.CaminhaoId, cc.ColetaId });
+
+        modelBuilder.Entity<CaminhaoColeta>()
+            .HasOne(cc => cc.Caminhao)
+            .WithMany(c => c.CaminhaoColetas)
+            .HasForeignKey(cc => cc.CaminhaoId);
+
+        modelBuilder.Entity<CaminhaoColeta>()
+            .HasOne(cc => cc.Coleta)
+            .WithMany(c => c.CaminhaoColetas)
+            .HasForeignKey(cc => cc.ColetaId);
+
     }
 }

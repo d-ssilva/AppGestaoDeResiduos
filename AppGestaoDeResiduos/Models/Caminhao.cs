@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using static AppGestaoDeResiduos.Models.UsuarioColeta;
 
 namespace AppGestaoDeResiduos.Models
 {
@@ -17,10 +18,6 @@ namespace AppGestaoDeResiduos.Models
         public string Placa { get; set; }
 
         [Required]
-        [Column("capacidade")]
-        public int Capacidade { get; set; }
-
-        [Required]
         [Column("qtd_de_coletas")]
         public int QtdColetas { get; set; }
 
@@ -31,13 +28,13 @@ namespace AppGestaoDeResiduos.Models
 
         //RELACIONAMENTO
         //Um caminhão tem apenas uma localização 
-        // e uma coleta
-        public LocalizacaoCaminhao? LocalizacaoCaminhao { get; set; }
-        [Column("localizacao_caminhao_id")]
-        public int LocalizacaoCaminhaoId { get; set; }
-        public  Coleta Coleta { get; set; }
-        [Column("coleta_id")]
-        public int ColetaId { get; set; }
+        //Um caminhão tem muitas coletas
+        public Localizacao? LocalizacaoCaminhao { get; set; }
+        [Column("localizacao_id")]
+        public int LocalizacaoId { get; set; }       
+        
+        // Relacionamento N:N com Coleta
+        public virtual ICollection<CaminhaoColeta> CaminhaoColetas { get; set; }
 
         // \RELACIONAMENTO
 

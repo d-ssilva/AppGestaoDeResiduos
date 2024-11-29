@@ -24,11 +24,11 @@ namespace AppGestaoDeResiduos.Models
         [Column("email")]
         public string? Email { get; set; }
 
-        [Column("foi_notificado")]
-        public Boolean FoiNotificado = false;
-
         [Column("agendou_coleta")]
         public Boolean AgendouColeta = false;
+
+        [Column("foi_notificado")]
+        public Boolean FoiNotificado = false;       
 
         //RELACIONAMENTO
         // Um usuário tem apenas um endereço
@@ -36,14 +36,7 @@ namespace AppGestaoDeResiduos.Models
         public Endereco Endereco { get; set; }
         [Column("endereco_id")]
         public int EnderecoId { get; set; }
-        public virtual ICollection<Notificacao> Notificacao { get; set; }
-        [Column("notificacao_id")]
-        public int NotificacaoId {  get; set; }
-
-        public Coleta Coleta { get; set; }
-        [Column("coleta_id")]
-        public int ColetaId { get; set; }
-
+        public virtual ICollection<Notificacao> Notificacao { get; set; }    
 
         // \RELACIONAMENTO
 

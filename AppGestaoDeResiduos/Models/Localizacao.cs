@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AppGestaoDeResiduos.Models
 {
     [Table("tb_localizacao_caminhao")]
-    [Index(nameof(LocalizacaoCaminhao), IsUnique = true)]
-    public class LocalizacaoCaminhao
+    [Index(nameof(Localizacao), IsUnique = true)]
+    public class Localizacao
     {
         [Key]
         [Column("localizacao_caminhao_id")]
@@ -23,15 +23,5 @@ namespace AppGestaoDeResiduos.Models
         [Required]
         [Column("data_hora")]
         public DateTime DataEHora { get; set; } // Pegar tempo real (minutos)
-
-
-
-        //RELACIONAMENTOS
-        // Uma localização só pode ter um caminhao
-        public Caminhao Caminhao { get; set; }
-        [Column("caminhao_id")]
-        public int CaminhaoId { get; set; }
-        // \RELACIONAMENTOS
-
     }
 }

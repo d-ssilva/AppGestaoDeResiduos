@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Conectando o app com o Banco de Dados
 builder.Services.AddDbContext<ApplicationDbContext>
     (options => options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
 

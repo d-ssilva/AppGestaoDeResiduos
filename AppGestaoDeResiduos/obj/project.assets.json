@@ -3422,29 +3422,30 @@
     "net8.0": [
       "Microsoft.EntityFrameworkCore >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0",
+      "Microsoft.EntityFrameworkCore.Relational >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
       "Oracle.EntityFrameworkCore >= 8.23.60"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Danilo\\.nuget\\packages\\": {},
+    "C:\\Users\\danilo.silva\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj",
+      "projectUniqueName": "C:\\Users\\danilo.silva\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj",
       "projectName": "AppGestaoDeResiduos",
-      "projectPath": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj",
-      "packagesPath": "C:\\Users\\Danilo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\obj\\",
+      "projectPath": "C:\\Users\\danilo.silva\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj",
+      "packagesPath": "C:\\Users\\danilo.silva\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\danilo.silva\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Danilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\danilo.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3484,6 +3485,10 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[9.0.0, )"
           },

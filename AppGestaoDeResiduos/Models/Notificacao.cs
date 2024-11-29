@@ -25,10 +25,8 @@ namespace AppGestaoDeResiduos.Models
 
         //RELACIONAMENTO
         // Uma notificação tem apenas um usuário
-        [ForeignKey("UsuarioId")] // Relacionamento N:1
-        public virtual Usuario Usuario { get; set; }
-        [Column("usuario_id")]
-        public int UsuarioId { get; set; }
+        // Relacionamento N:N com Usuario
+        public virtual ICollection<UsuarioNotificacao> UsuarioNotificacoes { get; set; }
 
         // \RELACIONAMENTO
     }
