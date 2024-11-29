@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|solutionrelative:appgestaoderesiduos\\data\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|c:\\users\\danilo\\documents\\projetos c#\\appgestaoderesiduos\\appgestaoderesiduos\\models\\notificacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|solutionrelative:appgestaoderesiduos\\models\\notificacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|c:\\users\\danilo\\documents\\projetos c#\\appgestaoderesiduos\\appgestaoderesiduos\\models\\coleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|solutionrelative:appgestaoderesiduos\\models\\coleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|c:\\users\\danilo\\documents\\projetos c#\\appgestaoderesiduos\\appgestaoderesiduos\\models\\caminhao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|solutionrelative:appgestaoderesiduos\\models\\caminhao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|c:\\users\\danilo\\documents\\projetos c#\\appgestaoderesiduos\\appgestaoderesiduos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|solutionrelative:appgestaoderesiduos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|c:\\users\\danilo\\documents\\projetos c#\\appgestaoderesiduos\\appgestaoderesiduos\\models\\localizacaocaminhao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,8 +22,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\appsettings.json",
+              "RelativeDocumentMoniker": "AppGestaoDeResiduos\\appsettings.json",
+              "ToolTip": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\appsettings.json",
+              "RelativeToolTip": "AppGestaoDeResiduos\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-29T00:56:01.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LocalizacaoCaminhao.cs",
+              "DocumentMoniker": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\LocalizacaoCaminhao.cs",
+              "RelativeDocumentMoniker": "AppGestaoDeResiduos\\Models\\LocalizacaoCaminhao.cs",
+              "ToolTip": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\LocalizacaoCaminhao.cs",
+              "RelativeToolTip": "AppGestaoDeResiduos\\Models\\LocalizacaoCaminhao.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T00:51:55.308Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,82 +57,9 @@
               "RelativeDocumentMoniker": "AppGestaoDeResiduos\\Data\\Contexts\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Data\\Contexts\\ApplicationDbContext.cs",
               "RelativeToolTip": "AppGestaoDeResiduos\\Data\\Contexts\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwGEAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwA8AAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T00:12:59.966Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "6c7bbe6a-450f-413f-b888-0f26e1fa1283",
-        "Display": 0,
-        "X": 516,
-        "Y": 130,
-        "Width": 1065,
-        "Height": 404,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LocalizacaoCaminhao.cs",
-              "DocumentMoniker": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\LocalizacaoCaminhao.cs",
-              "RelativeDocumentMoniker": "AppGestaoDeResiduos\\Models\\LocalizacaoCaminhao.cs",
-              "ToolTip": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\LocalizacaoCaminhao.cs",
-              "RelativeToolTip": "AppGestaoDeResiduos\\Models\\LocalizacaoCaminhao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T23:34:44.716Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Caminhao.cs",
-              "DocumentMoniker": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\Caminhao.cs",
-              "RelativeDocumentMoniker": "AppGestaoDeResiduos\\Models\\Caminhao.cs",
-              "ToolTip": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\Caminhao.cs",
-              "RelativeToolTip": "AppGestaoDeResiduos\\Models\\Caminhao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T22:20:15.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Coleta.cs",
-              "DocumentMoniker": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\Coleta.cs",
-              "RelativeDocumentMoniker": "AppGestaoDeResiduos\\Models\\Coleta.cs",
-              "ToolTip": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\Coleta.cs",
-              "RelativeToolTip": "AppGestaoDeResiduos\\Models\\Coleta.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T23:19:04.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Notificacao.cs",
-              "DocumentMoniker": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\Notificacao.cs",
-              "RelativeDocumentMoniker": "AppGestaoDeResiduos\\Models\\Notificacao.cs",
-              "ToolTip": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Models\\Notificacao.cs",
-              "RelativeToolTip": "AppGestaoDeResiduos\\Models\\Notificacao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T23:34:39.142Z",
               "EditorCaption": ""
             }
           ]

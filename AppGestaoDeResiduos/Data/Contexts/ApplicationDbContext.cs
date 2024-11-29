@@ -13,7 +13,7 @@ public class ApplicationDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // Configuração para o Oracle
-        optionsBuilder.UseOracle("User Id=your_username;Password=your_password;Data Source=your_data_source");
+        optionsBuilder.UseOracle("User Id=rm553989;Password=200794;Data Source=oracle.fiap.com.br:1521/orcl");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
