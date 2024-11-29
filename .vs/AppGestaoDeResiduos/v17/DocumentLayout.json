@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|c:\\users\\danilo\\documents\\projetos c#\\appgestaoderesiduos\\appgestaoderesiduos\\data\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D84F923-400B-429E-B2C4-17E4854E0F37}|AppGestaoDeResiduos\\AppGestaoDeResiduos.csproj|solutionrelative:appgestaoderesiduos\\data\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Data\\Contexts\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "AppGestaoDeResiduos\\Data\\Contexts\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Danilo\\Documents\\Projetos C#\\AppGestaoDeResiduos\\AppGestaoDeResiduos\\Data\\Contexts\\ApplicationDbContext.cs",
+              "RelativeToolTip": "AppGestaoDeResiduos\\Data\\Contexts\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwGEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T00:12:59.966Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

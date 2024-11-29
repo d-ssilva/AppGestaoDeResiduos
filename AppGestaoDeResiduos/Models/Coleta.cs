@@ -13,10 +13,8 @@ namespace AppGestaoDeResiduos.Models
         [Column("coleta_id")]
         public int ColetaId { get; set; }
 
-        [Column("capacidade_usada")]
-        public int CapacidadeUsada { get; set; } 
-        //  Permitir que o sistema avalie se o caminhão precisa retornar para descarregar
-        //  ou se pode atender a outras solicitações.
+        [Column("qtd_de_coleta")]
+        public int QtdColeta { get; set; }         
 
         [Column("data_coleta")]
         public DateOnly DataDaColeta { get; set; } // Pegar data da coleta
@@ -25,8 +23,14 @@ namespace AppGestaoDeResiduos.Models
         //RELACIONAMENTOS
         // Uma coleta tem apenas um caminhao e um endereço
         public Caminhao Caminhao { get; set; }
+
+        [Column("caminhao_id")]
         public int CaminhaoId { get; set; }
+
+
         public Endereco Endereco { get; set; }
+
+        [Column("endereco_id")]
         public int EnderecoId { get; set; }
 
         // \RELACIONAMENTOS

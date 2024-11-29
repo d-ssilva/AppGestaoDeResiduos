@@ -145,3 +145,15 @@ C:\Users\danilo.silva\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResid
 C:\Users\danilo.silva\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.pdb
 C:\Users\danilo.silva\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.genruntimeconfig.cache
 C:\Users\danilo.silva\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\ref\AppGestaoDeResiduos.dll
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.csproj.AssemblyReference.cache
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.AssemblyInfoInputs.cache
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.AssemblyInfo.cs
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.csproj.CoreCompileInputs.cache
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.RazorAssemblyInfo.cache
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.RazorAssemblyInfo.cs
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.sourcelink.json
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.dll
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\refint\AppGestaoDeResiduos.dll
+C:\Users\Danilo\Documents\Projetos C#\AppGestaoDeResiduos\AppGestaoDeResiduos\obj\Debug\net8.0\AppGestaoDeResiduos.pdb
