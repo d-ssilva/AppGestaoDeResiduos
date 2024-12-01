@@ -5,11 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AppGestaoDeResiduos.Models
 {
     [Table("tb_coleta")]
-    [Index(nameof(Caminhao), IsUnique = true)]
+    [Index(nameof(Coleta), IsUnique = true)]
     public class Coleta
     {
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("coleta_id")]
         public int ColetaId { get; set; }
 
@@ -22,17 +23,17 @@ namespace AppGestaoDeResiduos.Models
 
         //RELACIONAMENTOS
         // Uma coleta tem apenas um endereço
-        // Relacionamento N:N com Caminhao
-        public virtual ICollection<CaminhaoColeta> CaminhaoColetas { get; set; }        
-
+        // Uma coleta tem apenas um caminhao
         public Endereco Endereco { get; set; }
-
         [Column("endereco_id")]
         public int EnderecoId { get; set; }
 
 
         public Caminhao Caminhao { get; set; }
+        [Column("caminhao_id")]
         public int CaminhaoId { get; set; }
+
+        public virtual ICollection<Usuario> Usuarios { get; set; }
 
         // \RELACIONAMENTOS
     }

@@ -36,7 +36,9 @@ namespace AppGestaoDeResiduos.Models
         public Endereco Endereco { get; set; }
         [Column("endereco_id")]
         public int EnderecoId { get; set; }
-        public virtual ICollection<Notificacao> Notificacao { get; set; }    
+        public virtual ICollection<Notificacao> Notificacoes { get; set; }
+
+        public virtual ICollection<Coleta> Coletas { get; set; }
 
         // \RELACIONAMENTO
 

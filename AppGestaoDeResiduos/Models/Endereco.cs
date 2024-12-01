@@ -9,6 +9,7 @@ namespace AppGestaoDeResiduos.Models
     public class Endereco
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("endereco_id")]
         public int EnderecoId { get; set; }
 

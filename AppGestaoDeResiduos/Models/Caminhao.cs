@@ -1,15 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using static AppGestaoDeResiduos.Models.UsuarioColeta;
 
 namespace AppGestaoDeResiduos.Models
 {
-    [Table("tb_caminhao")]
+    [Table("tb_caminhao")]    
     [Index(nameof(Caminhao),IsUnique = true)]
     public class Caminhao
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("caminhao_id")]
         public int CaminhaoId { get; set; }
 
@@ -24,17 +24,22 @@ namespace AppGestaoDeResiduos.Models
         [Required]
         [Column("qtd_de_coletas_max")]
         public int QtdColetasMaxima { get; set; }
-        
+
 
         //RELACIONAMENTO
-        //Um caminhão tem apenas uma localização 
-        //Um caminhão tem muitas coletas
+        //Um caminhão tem uma localização 
+        //Um caminhão tem uma coletas
+
+        public Coleta Coleta { get; set; }
+        [Column("coleta_id")]
+        public int ColetaId { get; set; }
+
         public Localizacao? LocalizacaoCaminhao { get; set; }
         [Column("localizacao_id")]
         public int LocalizacaoId { get; set; }       
         
-        // Relacionamento N:N com Coleta
-        public virtual ICollection<CaminhaoColeta> CaminhaoColetas { get; set; }
+        
+        
 
         // \RELACIONAMENTO
 

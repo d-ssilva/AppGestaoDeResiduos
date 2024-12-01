@@ -4,12 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppGestaoDeResiduos.Models
 {
-    [Table("tb_localizacao_caminhao")]
+    [Table("tb_localizacao")]
     [Index(nameof(Localizacao), IsUnique = true)]
     public class Localizacao
     {
         [Key]
-        [Column("localizacao_caminhao_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("localizacao_id")]
         public int LocalizacaoCaminhaoId { get; set; }
 
         [Required]

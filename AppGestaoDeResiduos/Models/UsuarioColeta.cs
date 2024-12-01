@@ -9,14 +9,18 @@ namespace AppGestaoDeResiduos.Models
     public class UsuarioColeta
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("usuario_coleta_id")]
         public int UsuarioColetaId { get; set; }
 
         public Usuario Usuario { get; set; }
+        [Column("usuario_id")]
         public int UsuarioId { get; set; }
 
 
 
         public Coleta Coleta { get; set; }
+        [Column("coleta_id")]
         public int ColetaId { get; set; }
 
     }
