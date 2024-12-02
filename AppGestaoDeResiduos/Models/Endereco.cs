@@ -10,20 +10,20 @@ namespace AppGestaoDeResiduos.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EnderecoId { get; set; }
 
-        public int Cep { get; set; }
+        public int? Cep { get; set; }
 
         [MaxLength(50)]
-        public string Estado { get; set; }
+        public string? Estado { get; set; }
 
         [MaxLength(50)]
-        public string Cidade { get; set; }
+        public string? Cidade { get; set; }
 
         [MaxLength(100)]
-        public string Rua { get; set; }
+        public string? Rua { get; set; }
 
-        public int Numero { get; set; }
+        public int? Numero { get; set; }
 
-        public ICollection<Usuario> Usuarios { get; set; }
+        public ICollection<Usuario>? Usuarios { get; set; }
     }
 
 }

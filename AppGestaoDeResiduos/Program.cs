@@ -1,6 +1,7 @@
-using AppGestaoDeResiduos.Data.Contexts;
+using AppGestaoDeResiduos.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
+using AppGestaoDeResiduos.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,9 @@ builder.Services.AddControllersWithViews();
 // Conectando o app com o Banco de Dados
 builder.Services.AddDbContext<ApplicationDbContext>
     (options => options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Registrar TestService
+builder.Services.AddScoped<TestService>();
 
 var app = builder.Build();
 
@@ -32,4 +36,37 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+// Adicionar dados de teste antes de iniciar a aplicação
+using (var scope = app.Services.CreateScope())
+{
+    var testService = scope.ServiceProvider.GetRequiredService<TestService>();
+    await testService.AddTestDataAsync();
+}
+
 app.Run();
+
+public class TestService
+{
+    private readonly ApplicationDbContext _context;
+
+    public TestService(ApplicationDbContext context)
+    {
+        _context = context;
+    }
+
+    public async Task AddTestDataAsync()
+    {
+        var testUser = new Usuario
+        {
+            Nome = "Danilo",
+            Email = "danilo@exemplo.com",
+            AgendouColeta = false,
+            FoiNotificado = false,
+            EnderecoId = 1
+        };
+
+        _context.Usuarios.Add(testUser);
+        await _context.SaveChangesAsync();
+    }
+}
+

@@ -12,20 +12,22 @@ namespace AppGestaoDeResiduos.Models
 
         [Required]
         [MaxLength(20)]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
-        public bool AgendouColeta { get; set; }
-        public bool FoiNotificado { get; set; }
+        [Required]
+        public bool? AgendouColeta { get; set; }
+        [Required]
+        public bool? FoiNotificado { get; set; }
 
-        public int EnderecoId { get; set; }
+        public int? EnderecoId { get; set; }
         [ForeignKey("EnderecoId")]
-        public Endereco Endereco { get; set; }
+        public Endereco? Endereco { get; set; }
 
-        public ICollection<UsuarioNotificacao> UsuarioNotificacoes { get; set; }
-        public ICollection<UsuarioColeta> UsuarioColetas { get; set; }
+        public ICollection<UsuarioNotificacao>? UsuarioNotificacoes { get; set; }
+        public ICollection<UsuarioColeta>? UsuarioColetas { get; set; }
     }
 }

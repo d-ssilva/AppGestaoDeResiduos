@@ -8,12 +8,12 @@ namespace AppGestaoDeResiduos.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int NotificacaoId { get; set; }
+        public int? NotificacaoId { get; set; }
 
         [MaxLength(250)]
-        public string Mensagem { get; set; }
+        public string? Mensagem { get; set; }
 
-        public ICollection<UsuarioNotificacao> UsuarioNotificacoes { get; set; }
+        public ICollection<UsuarioNotificacao>? UsuarioNotificacoes { get; set; }
     }
 
 }

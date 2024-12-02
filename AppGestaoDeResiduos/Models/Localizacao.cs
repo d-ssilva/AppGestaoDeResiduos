@@ -10,11 +10,11 @@ namespace AppGestaoDeResiduos.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LocalizacaoId { get; set; }
 
-        public int Longitude { get; set; }
-        public int Latitude { get; set; }
+        public int? Longitude { get; set; }
+        public int? Latitude { get; set; }
         public DateTime DataHora { get; set; }
 
-        public ICollection<Caminhao> Caminhoes { get; set; }
+        public ICollection<Caminhao>? Caminhoes { get; set; }
     }
 
 }

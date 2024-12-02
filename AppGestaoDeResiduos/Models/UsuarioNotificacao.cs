@@ -12,11 +12,11 @@ namespace AppGestaoDeResiduos.Models
 
         public int UsuarioId { get; set; }
         [ForeignKey("UsuarioId")]
-        public Usuario Usuario { get; set; }
+        public Usuario? Usuario { get; set; }
 
         public int NotificacaoId { get; set; }
         [ForeignKey("NotificacaoId")]
-        public Notificacao Notificacao { get; set; }
+        public Notificacao? Notificacao { get; set; }
 
         public DateTime DataNotificacao { get; set; }
     }

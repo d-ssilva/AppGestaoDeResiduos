@@ -12,15 +12,15 @@ namespace AppGestaoDeResiduos.Models
         public int CaminhaoId { get; set; }
 
         [MaxLength(7)]
-        public string Placa { get; set; }
+        public string? Placa { get; set; }
 
-        public int QtdDeColetas { get; set; }
-        public int QtdDeColetasMax { get; set; }
+        public int? QtdDeColetas { get; set; }
+        public int? QtdDeColetasMax { get; set; }
 
-        public int LocalizacaoId { get; set; }
+        public int? LocalizacaoId { get; set; }
         [ForeignKey("LocalizacaoId")]
-        public Localizacao Localizacao { get; set; }
+        public Localizacao? Localizacao { get; set; }
 
-        public ICollection<Coleta> Coletas { get; set; }
+        public ICollection<Coleta>? Coletas { get; set; }
     }
 }
