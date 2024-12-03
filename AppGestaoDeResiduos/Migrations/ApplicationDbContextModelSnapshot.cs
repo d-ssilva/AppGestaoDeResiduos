@@ -26,50 +26,59 @@ namespace AppGestaoDeResiduos.Migrations
                 {
                     b.Property<int>("CaminhaoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("caminhao_id");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CaminhaoId"));
 
-                    b.Property<int>("LocalizacaoId")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("LocalizacaoId")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("localizacao_id");
 
                     b.Property<string>("Placa")
-                        .IsRequired()
                         .HasMaxLength(7)
-                        .HasColumnType("NVARCHAR2(7)");
+                        .HasColumnType("NVARCHAR2(7)")
+                        .HasColumnName("placa");
 
-                    b.Property<int>("QtdDeColetas")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("QtdDeColetas")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("qtd_de_coletas");
 
-                    b.Property<int>("QtdDeColetasMax")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("QtdDeColetasMax")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("qtd_de_coletas_max");
 
                     b.HasKey("CaminhaoId");
 
                     b.HasIndex("LocalizacaoId");
 
-                    b.ToTable("Caminhoes");
+                    b.ToTable("tb_caminhao");
                 });
 
             modelBuilder.Entity("AppGestaoDeResiduos.Models.Coleta", b =>
                 {
                     b.Property<int>("ColetaId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("coleta_id");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ColetaId"));
 
                     b.Property<int>("CaminhaoId")
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("caminhao_id");
 
-                    b.Property<DateTime>("DataColeta")
-                        .HasColumnType("TIMESTAMP(7)");
+                    b.Property<DateTime?>("DataColeta")
+                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("data_coleta");
 
-                    b.Property<int>("EnderecoId")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("EnderecoId")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("endereco_id");
 
-                    b.Property<int>("QtdDeColeta")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("QtdDeColeta")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("qtd_de_coletas");
 
                     b.HasKey("ColetaId");
 
@@ -77,129 +86,145 @@ namespace AppGestaoDeResiduos.Migrations
 
                     b.HasIndex("EnderecoId");
 
-                    b.ToTable("Coletas");
+                    b.ToTable("tb_coleta");
                 });
 
             modelBuilder.Entity("AppGestaoDeResiduos.Models.Endereco", b =>
                 {
                     b.Property<int>("EnderecoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("endereco_id");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EnderecoId"));
 
-                    b.Property<int>("Cep")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("Cep")
+                        .HasMaxLength(8)
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("cep");
 
                     b.Property<string>("Cidade")
-                        .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("NVARCHAR2(50)");
+                        .HasColumnType("NVARCHAR2(50)")
+                        .HasColumnName("cidade");
 
                     b.Property<string>("Estado")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("NVARCHAR2(50)");
+                        .HasMaxLength(2)
+                        .HasColumnType("NVARCHAR2(2)")
+                        .HasColumnName("estado");
 
-                    b.Property<int>("Numero")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("Numero")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("numero");
 
                     b.Property<string>("Rua")
-                        .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("NVARCHAR2(100)");
+                        .HasColumnType("NVARCHAR2(100)")
+                        .HasColumnName("rua");
 
                     b.HasKey("EnderecoId");
 
-                    b.ToTable("Enderecos");
+                    b.ToTable("tb_endereco");
                 });
 
             modelBuilder.Entity("AppGestaoDeResiduos.Models.Localizacao", b =>
                 {
                     b.Property<int>("LocalizacaoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("tb_localizacao");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LocalizacaoId"));
 
                     b.Property<DateTime>("DataHora")
-                        .HasColumnType("TIMESTAMP(7)");
+                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("data_hora");
 
-                    b.Property<int>("Latitude")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("Latitude")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("latitude");
 
-                    b.Property<int>("Longitude")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("Longitude")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("longitude");
 
                     b.HasKey("LocalizacaoId");
 
-                    b.ToTable("Localizacoes");
+                    b.ToTable("tb_localizacao");
                 });
 
             modelBuilder.Entity("AppGestaoDeResiduos.Models.Notificacao", b =>
                 {
-                    b.Property<int>("NotificacaoId")
+                    b.Property<int?>("NotificacaoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("notificacao_id");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificacaoId"));
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("NotificacaoId"));
 
                     b.Property<string>("Mensagem")
-                        .IsRequired()
                         .HasMaxLength(250)
-                        .HasColumnType("NVARCHAR2(250)");
+                        .HasColumnType("NVARCHAR2(250)")
+                        .HasColumnName("mensagem");
 
                     b.HasKey("NotificacaoId");
 
-                    b.ToTable("Notificacoes");
+                    b.ToTable("tb_notificacao");
                 });
 
             modelBuilder.Entity("AppGestaoDeResiduos.Models.Usuario", b =>
                 {
                     b.Property<int>("UsuarioId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("usuario_id");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UsuarioId"));
 
-                    b.Property<bool>("AgendouColeta")
-                        .HasColumnType("NUMBER(1)");
+                    b.Property<bool?>("AgendouColeta")
+                        .HasColumnType("NUMBER(1)")
+                        .HasColumnName("agendou_coleta");
 
                     b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)");
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("email");
 
-                    b.Property<int>("EnderecoId")
-                        .HasColumnType("NUMBER(10)");
+                    b.Property<int?>("EnderecoId")
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("endereco_id");
 
-                    b.Property<bool>("FoiNotificado")
-                        .HasColumnType("NUMBER(1)");
+                    b.Property<bool?>("FoiNotificado")
+                        .HasColumnType("NUMBER(1)")
+                        .HasColumnName("foi_notificado");
 
                     b.Property<string>("Nome")
-                        .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("NVARCHAR2(20)");
+                        .HasColumnType("NVARCHAR2(20)")
+                        .HasColumnName("nome");
 
                     b.HasKey("UsuarioId");
 
                     b.HasIndex("EnderecoId");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("tb_usuario");
                 });
 
             modelBuilder.Entity("AppGestaoDeResiduos.Models.UsuarioColeta", b =>
                 {
                     b.Property<int>("UsuarioColetaId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("usuario_coleta_id");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UsuarioColetaId"));
 
                     b.Property<int>("ColetaId")
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("coleta_id");
 
                     b.Property<int>("UsuarioId")
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("usuario_id");
 
                     b.HasKey("UsuarioColetaId");
 
@@ -207,25 +232,29 @@ namespace AppGestaoDeResiduos.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("UsuarioColetas");
+                    b.ToTable("tb_usuario_coleta");
                 });
 
             modelBuilder.Entity("AppGestaoDeResiduos.Models.UsuarioNotificacao", b =>
                 {
                     b.Property<int>("UsuarioNotificacaoId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("usuario_notificacao_id");
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UsuarioNotificacaoId"));
 
                     b.Property<DateTime>("DataNotificacao")
-                        .HasColumnType("TIMESTAMP(7)");
+                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnName("data_notificacao");
 
                     b.Property<int>("NotificacaoId")
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("notificacao_id");
 
                     b.Property<int>("UsuarioId")
-                        .HasColumnType("NUMBER(10)");
+                        .HasColumnType("NUMBER(10)")
+                        .HasColumnName("usuario_id");
 
                     b.HasKey("UsuarioNotificacaoId");
 
@@ -233,16 +262,14 @@ namespace AppGestaoDeResiduos.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("UsuarioNotificacoes");
+                    b.ToTable("tb_usuario_notificacao");
                 });
 
             modelBuilder.Entity("AppGestaoDeResiduos.Models.Caminhao", b =>
                 {
                     b.HasOne("AppGestaoDeResiduos.Models.Localizacao", "Localizacao")
                         .WithMany("Caminhoes")
-                        .HasForeignKey("LocalizacaoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LocalizacaoId");
 
                     b.Navigation("Localizacao");
                 });
@@ -257,9 +284,7 @@ namespace AppGestaoDeResiduos.Migrations
 
                     b.HasOne("AppGestaoDeResiduos.Models.Endereco", "Endereco")
                         .WithMany()
-                        .HasForeignKey("EnderecoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("EnderecoId");
 
                     b.Navigation("Caminhao");
 
@@ -270,9 +295,7 @@ namespace AppGestaoDeResiduos.Migrations
                 {
                     b.HasOne("AppGestaoDeResiduos.Models.Endereco", "Endereco")
                         .WithMany("Usuarios")
-                        .HasForeignKey("EnderecoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("EnderecoId");
 
                     b.Navigation("Endereco");
                 });

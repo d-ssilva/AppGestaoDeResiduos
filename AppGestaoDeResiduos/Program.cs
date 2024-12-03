@@ -2,6 +2,7 @@ using AppGestaoDeResiduos.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 using AppGestaoDeResiduos.Models;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,14 @@ builder.Services.AddDbContext<ApplicationDbContext>
 // Registrar TestService
 builder.Services.AddScoped<TestService>();
 
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+        options.JsonSerializerOptions.MaxDepth = 64; // Ajuste conforme necessário
+    });
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,23 +36,22 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Adicionar dados de teste antes de iniciar a aplicação
+app.Run();
+
+//Adicionar dados de teste antes de iniciar a aplicação
 using (var scope = app.Services.CreateScope())
 {
-    var testService = scope.ServiceProvider.GetRequiredService<TestService>();
-    await testService.AddTestDataAsync();
+var testService = scope.ServiceProvider.GetRequiredService<TestService>();
+await testService.AddTestDataAsync();
 }
 
-app.Run();
 
 public class TestService
 {

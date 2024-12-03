@@ -9,7 +9,7 @@ namespace AppGestaoDeResiduos.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("usuario_id")]
+        [Column("00")]
         public int UsuarioId { get; set; }
 
         

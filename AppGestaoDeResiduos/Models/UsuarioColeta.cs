@@ -14,13 +14,16 @@ namespace AppGestaoDeResiduos.Models
 
         [Column("usuario_id")]
         public int UsuarioId { get; set; }
-        [ForeignKey("UsuarioId")]
-        public Usuario Usuario { get; set; }
 
+        [Required]
+        [ForeignKey("UsuarioId")]
+        public Usuario? Usuario { get; set; }
+
+        [Required]
         [Column("coleta_id")]
         public int ColetaId { get; set; }
         [ForeignKey("ColetaId")]
-        public Coleta Coleta { get; set; }
+        public Coleta? Coleta { get; set; }
     }
 
 }
